@@ -1,0 +1,39 @@
+{
+  "resto": [
+    {
+      "Name": "Dominos",
+      "Address": "Kalyan, Thane",
+      "Mobile": "8058472587",
+      "email": "pwe@gmail.com",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "Name": "Maccdonalds",
+      "Address": "Hsr layout, Bengaluru",
+      "Mobile": "9958472547",
+      "email": "mogu@gmail.com"
+    },
+    {
+      "id": 3,
+      "Name": "Moginis",
+      "Address": "Ghatkopar, Mumbai",
+      "Mobile": "8858472547",
+      "email": "pp@gmail.com"
+    },
+    {
+      "id": 4,
+      "Name": "99 Dosa",
+      "Address": "Koramangala, Bengaluru",
+      "Mobile": "9858472547",
+      "email": "hi@gmail.com"
+    },
+    {
+      "Name": "Dominos",
+      "Address": "Kalyan, Thane",
+      "Mobile": "8058472587",
+      "email": "pwe@gmail.com",
+      "id": 6
+    }
+  ]
+}

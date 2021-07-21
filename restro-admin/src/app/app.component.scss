@@ -1,0 +1,21 @@
+.container{
+    width: 1200px;
+    margin: auto;
+    app-restro-list{
+        margin-top: 40px;
+        display: block;
+    }
+}
+.banner{
+    width: 100%;
+    height: 400px;
+    background: url('../assets/banner.jpg') no-repeat center center;
+    background-size: cover;
+    &::after{
+        content: '';
+        background-color: rgba(0,0,0,0.3);
+        width: 100%;
+        height: 400px;
+        position: absolute;
+    }
+}

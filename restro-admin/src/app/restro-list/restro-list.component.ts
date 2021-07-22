@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from '../shared/api/api.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { RestroAddComponent } from '../restro-add/restro-add.component';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Component({
@@ -10,15 +11,25 @@ import { RestroAddComponent } from '../restro-add/restro-add.component';
   styleUrls: ['./restro-list.component.scss']
 })
 export class RestroListComponent implements OnInit {
+
   displayedColumns: string[] = ['id', 'Name', 'Address', 'Mobile', 'email', 'icon'];
-  @Input() dataSource:any;
-  
+
+  dataSource:any;
+
   constructor(
     private _api: ApiService,
     public dialog: MatDialog
-    ) { }
+    ) 
+    { 
+      // this._api.dataSource.subscribe((list) =>{
+      //  this.dataSource = list;
+      // })
+    }
 
   ngOnInit(): void {
+    this._api.refreshList$.subscribe(() =>{
+      this.getRestroList();
+    })
     this.getRestroList();
   }
 
@@ -34,9 +45,15 @@ export class RestroListComponent implements OnInit {
       width: '600px',
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      this.getRestroList();
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   this.getRestroList();
+    // });
+  }
+
+  deleteRestro(index:any){
+    this._api.deleteRestro(index).subscribe((res) => {
+      this.dataSource.splice(index, 1);
+    })
   }
 
 }

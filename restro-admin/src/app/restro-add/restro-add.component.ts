@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ApiService } from '../shared/api/api.service';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-restro-add',

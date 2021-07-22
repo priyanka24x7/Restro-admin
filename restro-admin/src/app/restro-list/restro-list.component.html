@@ -1,4 +1,5 @@
 <button class="add" mat-raised-button color="primary" (click)="openDialog()">Add New Restaurant</button>
+<!-- <mat-spinner *ngIf="dataSource.length === 0"></mat-spinner> -->
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 list-table">  
     <!-- Position Column -->
     <ng-container matColumnDef="id">
@@ -33,7 +34,7 @@
         <th mat-header-cell *matHeaderCellDef> Actions</th>
         <td mat-cell *matCellDef="let element"> 
             <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
-            <button mat-icon-button color="accent"><mat-icon>delete</mat-icon></button>
+            <button mat-icon-button color="accent" (click)="deleteRestro(element.id)"><mat-icon>delete</mat-icon></button>
         </td>
       </ng-container>
   

@@ -38,4 +38,14 @@ export class ApiService {
       })
     );
   }
+
+  updateRestro(id:any, data:any){
+    return this._http.put(this.url + `${id}`, data)
+    .pipe(
+      tap(() => {
+        this._refreshList$.next();
+      })
+    );
+  }
+
 }

@@ -33,7 +33,7 @@
     <ng-container matColumnDef="icon">
         <th mat-header-cell *matHeaderCellDef> Actions</th>
         <td mat-cell *matCellDef="let element"> 
-            <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+            <button mat-icon-button color="primary" (click)="updateRestro(element)"><mat-icon>edit</mat-icon></button>
             <button mat-icon-button color="accent" (click)="deleteRestro(element.id)"><mat-icon>delete</mat-icon></button>
         </td>
       </ng-container>

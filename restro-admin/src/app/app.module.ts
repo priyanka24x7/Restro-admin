@@ -15,11 +15,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RestroUpdateComponent } from './restro-update/restro-update.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     RestroListComponent,
-    RestroAddComponent
+    RestroAddComponent,
+    RestroUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ import {MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
